@@ -34,5 +34,12 @@ class Main extends PluginBase implements Listener {
 		$this->getLogger ()->info ( TextFormat::GREEN . "SuperSpawners Loaded" );
 	}
 	
+	public function onBreak(BlockBreakEvent $event, Item $item){
+		$player = $event->getPlayer;
+		if ($event->getBlock === "MonsterSpawner") {
+			$player->/* Code for giving item here */; /*Idk what :P */
+		return;
+		}
+	}
 }
 ?>
