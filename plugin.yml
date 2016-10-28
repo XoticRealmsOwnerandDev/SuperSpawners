@@ -1,0 +1,15 @@
+name: SuperSpawners
+main: majorplayz\main
+description: An essential plugin for all Faction servers that use Spawners.
+api: 2.0.0
+verison: 0.0.1-alpha.1
+
+commands:
+  spawners:
+    description: Main Command for SuperSpawners
+    permission: spawners.toggle
+    
+ permissions:
+   spawners.toggle:
+     default: op
+     description: Permission for Main SuperSpawners command
