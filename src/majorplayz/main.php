@@ -72,7 +72,7 @@ $spawners = new Toggle ();
 	
 	public function onLoad() {
 		$this->getLogger ()->info ( TextFormat::GREEN . "SuperSpawners Loaded" );
-		broadcast(TextFormat::YELLOW . "SuperSpawners Loaded!" . TextFormat::BLUE . "Auto-update status: " . $this->getConfig("updater");
+		broadcast(TextFormat::YELLOW . "SuperSpawners Loaded!" . TextFormat::BLUE . "Auto-update status: " . $this->getConfig("updater"));
 	}
 	
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
