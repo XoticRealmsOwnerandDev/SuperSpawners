@@ -86,8 +86,7 @@ $spawners = new Toggle ();
 				case "spawners" :
 					{
 						if (! isset ( $args [0] )) {
-							if (! $sender->hasPermission ( "spawners.toggle" ))
-								return;
+							if (! $sender->hasPermission ( "spawners.toggle" )) return;
 							$sender->sendMessage ( TextFormat::GOLD . "-------------" );
 							$sender->sendMessage ( TextFormat::GREEN . "SuperSpawners" );
 							$sender->sendMessage ( TextFormat::GOLD . "-------------" );
