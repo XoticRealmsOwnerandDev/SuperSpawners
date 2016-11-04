@@ -21,10 +21,7 @@ class Main extends PluginBase implements Listener {
 
 $spawners = new Toggle ();
 	
-	public function Toggle($mode) {
-		//Is mode set?
-		if (!isset($mode)) return "Toggle failed. Use a mode";
-		//Carry On
+	public function Toggle() {
 		
 		//Code for toggling spawners
 		if ($spawners.on === TRUE) {
@@ -117,5 +114,4 @@ $spawners = new Toggle ();
 	} // End Of onCommand
 	
 } // End Of Plugin
-			  
 ?>
