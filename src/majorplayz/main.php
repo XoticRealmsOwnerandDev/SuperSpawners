@@ -16,25 +16,33 @@ use pocketmine\block\Block;
 
 class Main extends PluginBase implements Listener {
 	
-	public $spawners;
-	
-
-$spawners = new Toggle ();
-	
-	public function Toggle() {
-		
-		//Code for toggling spawners
-		if ($spawners.on === TRUE) {
-			$spawners.on = FALSE;
+	class ToggleClass {
+		public function toggle() {
+			
+			if ($spawners->toggle()) {
+			$spawners->toggle();
 			return true;
 		}
-		if ($spawners.on === FALSE) {
-			$spawners.on = TRUE;
+		if (!$spawners->toggle()) {
+			$spawners->toggle();
 			return true;
 		} else {
 			return false;
 		}
+		
+		}
+		
+
+	public function spawners() {
+		
+		$spawners = spawners();
+		global $spawners;
+		
+		return new ToggleClass;
+
 	}
+	
+	
 	
 	// Constnants:
 	const AUTHOR = "MajorPlayz";
@@ -55,9 +63,11 @@ $spawners = new Toggle ();
 		if (isset($specficPlayer)) {
 			$specificPlayer->sendMessage($message);
 		} else {
-
-			//set $specificPlayer to null because I might need it later on :P
-			$specificPlayer = null;
+		
+		global $specificPlayer; //Read below
+		
+		//set $specificPlayer to null because I might need it later on :P
+		$specificPlayer = null;
 		
 		//Send Message to all online players
 		$playersOnline = $this->getOnlinePlayers();
@@ -93,7 +103,7 @@ $spawners = new Toggle ();
 							
 							if (isset ( $args [1] )) {
 								$sender->sendMessage ( TextFormat::BLUE . "Toggled!" );
-								$spawners.toggle();
+								$spawners->toggle();
 								return true;
 							}
 							if (! isset ( $args [1] )) {
