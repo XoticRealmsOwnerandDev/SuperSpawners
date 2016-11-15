@@ -1,17 +1,12 @@
 <?php
 class ToggleClass {
     public $spawnerstoggled = null;
-    
     function togglespawners()
     {
-        if (!$spawnerstoggled) {
-            
-            $spawnerstoggled = true;
-            
-        } else {
-            
-            $spawnerstoggled = false;
-            
+        if (!$spawnerstoggled) {          
+            $spawnerstoggled = true;           
+        } else {      
+            $spawnerstoggled = false; 
         }
         
     }
